@@ -43,7 +43,7 @@ public class NoteDataSource {
         ContentValues values = new ContentValues();                         // Create a new ContentValue Object
         values.put(MySQLiteHelper.COLUMN_TITLES, titles);                 // Insert a species into the COLUMN_SPECIES field using MYSQLiteHelper
         values.put(MySQLiteHelper.COLUMN_NOTES, notes);               // Insert weightInOz into the COLUMN_WEIGHT field using MYSQLiteHelper
-        values.put(MySQLiteHelper.COLUMN_DATECAUGHT, dateCaught);
+        values.put(MySQLiteHelper.COLUMN_DATECAUGHTED, dateCaught);
 
         long insertId = database.insert(MySQLiteHelper.TABLE_NOTES, null, values);         //  Instert the fish into the database using the parameters above
         Notes newNote = new Notes(insertId, titles, notes, dateCaught);
@@ -86,7 +86,7 @@ public class NoteDataSource {
         note.setId(cursor.getLong(cursor.getColumnIndex(MySQLiteHelper.COLUMN_ID)));
         note.setTitles(cursor.getString(cursor.getColumnIndex(MySQLiteHelper.COLUMN_TITLES)));
         note.setNotes(cursor.getString(cursor.getColumnIndex(MySQLiteHelper.COLUMN_NOTES)));
-        note.setDateCaught(cursor.getString(cursor.getColumnIndex(MySQLiteHelper.COLUMN_DATECAUGHT)));
+        note.setDateCaught(cursor.getString(cursor.getColumnIndex(MySQLiteHelper.COLUMN_DATECAUGHTED)));
 
         return note;
     }
