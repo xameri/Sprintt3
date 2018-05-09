@@ -20,33 +20,4 @@
         android:id="@+id/ListViewNote"
         android:choiceMode="singleChoice"
         android:clickable="false" />
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <Button
-            android:id="@+id/buttonAddNote"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Add" />
-
-        <Button
-            android:text="Delete"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/buttonDelete"
-            android:layout_weight="1" />
-
-        <Button
-            android:id="@+id/buttonDetails"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Detail" />
-
-    </LinearLayout>
-
 </LinearLayout>

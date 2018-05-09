@@ -45,10 +45,4 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/editTextDate" />
-
-    <Button
-        android:text="Save Fish"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonSave" />
 </LinearLayout>
