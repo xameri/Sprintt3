@@ -19,7 +19,7 @@ public class NotesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_notes);
 
         Bundle bundle = getIntent().getExtras();
-        Notes note = (Notes)   bundle.getSerializable("Notes");
+        Notes notes = (Notes)   bundle.getSerializable("Notes");
 
         // link each editText variable to the xml layout
         editTextTitles = (EditText) findViewById(R.id.editTextTitles);
@@ -27,9 +27,9 @@ public class NotesActivity extends AppCompatActivity {
         editTextDate = (EditText) findViewById(R.id.editTextDate);
 
 
-        editTextTitles.setText(note.getTitles());
-        editTextNotes.setText(note.getNotes());
-        editTextDate.setText(note.getDateCaught());
+        editTextTitles.setText(notes.getTitles());
+        editTextNotes.setText(notes.getNotes());
+        editTextDate.setText(notes.getDateCaught());
 
 
         // set up the button listener

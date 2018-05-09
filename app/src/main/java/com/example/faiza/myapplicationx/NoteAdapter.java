@@ -18,7 +18,7 @@ public class NoteAdapter extends ArrayAdapter<Notes> {
 
     private List<Notes> noteList;            // The list of fish to display
     private Context context;                // The original activity that displays this
-    private int layoutResource;                   // the layout to use
+    public int layoutResource;                   // the layout to use
 
     /**
      *   Basic constructo

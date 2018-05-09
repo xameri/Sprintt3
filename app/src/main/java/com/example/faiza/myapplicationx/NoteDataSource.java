@@ -59,7 +59,7 @@ public class NoteDataSource {
                 + " = " + id, null);
     }
 
-    public List<Notes> getAllFish() {
+    public List<Notes> getAllNote() {
         List<Notes> noteList = new ArrayList<Notes>();
 
         Cursor cursor = database.query(MySQLiteHelper.TABLE_NOTES,       //Modified to return all database fields

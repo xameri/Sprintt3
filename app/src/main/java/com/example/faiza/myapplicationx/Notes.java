@@ -25,13 +25,12 @@ public class Notes implements Serializable {
 
     }
 
-   /* public Notes(String titles, String notes, String dateCaught) {
+    public Notes(String titles, String notes, String dateCaught) {
         this.titles = titles;
         this.note = note;
         this.dateCaught = dateCaught;
 
     }
-*/
 
     public long getId() {
         return id;
@@ -69,7 +68,7 @@ public class Notes implements Serializable {
 
     @Override
     public String toString() {
-        return "Fish{" +
+        return "Notes{" +
                 "titles='" + titles + '\'' +
                 ", note='" + note + '\'' +
                 ", dateCaught='" + dateCaught + '\'' +

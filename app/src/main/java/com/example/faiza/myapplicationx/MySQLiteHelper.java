@@ -21,7 +21,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     public static final String COLUMN_ID = "_id";
     public static final String COLUMN_TITLES = "titles";
     public static final String COLUMN_NOTES = "notes";
-    public static final String COLUMN_DATECAUGHT = "dateCaught";
+    public static final String COLUMN_DATECAUGHTED = "dateCaught";
 
 
     private static final String DATABASE_NAME = "fishing.db";     // constant for the database name
@@ -38,7 +38,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + COLUMN_ID + " integer primary key autoincrement, "
             + COLUMN_TITLES + " TEXT not null,"
             + COLUMN_NOTES + " TEXT,"
-            + COLUMN_DATECAUGHT + " TEXT,"
+            + COLUMN_DATECAUGHTED + " TEXT,"
             + ");";
 
     private static MySQLiteHelper sInstance;
