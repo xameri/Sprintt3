@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -47,40 +49,32 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Set up the button to add a new note using a seperate activity
-        buttonAdd = (Button) findViewById(R.id.buttonAddNote);
-        buttonAdd.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                // Start up the add note activity with an intent
-                Intent detailActIntent = new Intent(view.getContext(), AddNoteActivity.class);
-                finish();
-                startActivity(detailActIntent);
-            }
-        });
-        // Set up the button to display details on one note using a seperate activity
-        buttonDetails = (Button) findViewById(R.id.buttonDetails);
-        buttonDetails.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Log.d("MAIN", "onClick for Details");
-                Intent detailActIntent = new Intent(view.getContext(), NotesActivity.class);
-                detailActIntent.putExtra("Note", noteList.get(positionSelected));
-                finish();
-                startActivity(detailActIntent);
-            }
-        });
-        // Set up the button to display details on one note using a seperate activity
-        buttonDelete = (Button) findViewById(R.id.buttonDelete);
-        buttonDelete.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Log.d("MAIN", "onClick for Delete");
-                Log.d("MAIN", "Delete at position " + positionSelected);
-                noteDataSource.deleteNote(noteList.get(positionSelected));
-                noteAdapter.remove( noteList.get(positionSelected) );
-                noteAdapter.notifyDataSetChanged();
-            }
-        });
+
 
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
 
 
     @Override
