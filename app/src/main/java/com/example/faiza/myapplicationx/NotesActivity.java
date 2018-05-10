@@ -11,7 +11,7 @@ import android.widget.EditText;
 
 public class NotesActivity extends AppCompatActivity {
 
-    Button buttonBack;
+    
     EditText editTextTitles, editTextNotes, editTextDate;
     NoteDataSource noteDataSource;
 
