@@ -18,7 +18,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button buttonAdd, buttonDetails, buttonDelete;            // two button widgets
+    
     ListView listViewNote;                      // listview to display all the note in the database
     NoteDataSource noteDataSource;              // provides interaction to the SQLite note table
     ArrayAdapter<Notes> noteAdapter;
