@@ -12,7 +12,7 @@ import android.widget.EditText;
 
 public class AddNoteActivity extends AppCompatActivity {
 
-    Button buttonSave;
+   
     EditText editTextTitles, editTextNotes, editTextDate;
     NoteDataSource noteDataSource;
 
