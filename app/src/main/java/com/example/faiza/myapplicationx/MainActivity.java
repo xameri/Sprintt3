@@ -1,5 +1,5 @@
 package com.example.faiza.myapplicationx;
-// I am commiting now
+// My Name is Farah here commiting Sprint 2
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

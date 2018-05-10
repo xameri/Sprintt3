@@ -1,5 +1,5 @@
 package com.example.faiza.myapplicationx;
-
+// My Name is Farah here commiting Sprint 2
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
