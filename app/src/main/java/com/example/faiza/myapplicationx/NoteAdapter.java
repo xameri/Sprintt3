@@ -1,5 +1,5 @@
 package com.example.faiza.myapplicationx;
-// My Name is Farah here commiting Sprint 2
+// My Name is Farah here commiting Sprint 3
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
