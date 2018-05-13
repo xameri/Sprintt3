@@ -71,7 +71,6 @@ public class AddNoteActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
     @Override
     protected void onResume() {
         noteDataSource.open();

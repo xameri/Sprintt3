@@ -20,8 +20,10 @@ public class NotesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notes);
 
+
         Bundle bundle = getIntent().getExtras();
-        Notes notes = (Notes)   bundle.getSerializable("Notes");
+
+        Notes notes = (Notes) bundle.getSerializable("Notes");
 
         // link each editText variable to the xml layout
         etTitles = (EditText) findViewById(R.id.editTextTitles);

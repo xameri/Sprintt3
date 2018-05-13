@@ -27,7 +27,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "fishing.db";     // constant for the database name
     //This variable serves as a constant for the DATABASE version.
     //Incremented the version of the database so Android deletes the old one and creates a new one with our new field
-    private static final int DATABASE_VERSION = 101;
+    private static final int DATABASE_VERSION = 102;
 
     /*
      * This statement defines a database creation sql statement.
