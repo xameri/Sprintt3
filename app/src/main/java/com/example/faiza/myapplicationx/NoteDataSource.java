@@ -39,14 +39,14 @@ public class NoteDataSource {
         dbHelper.close();
     }
 
-    public Notes createNote( String titles, String notes, String dateCaught) {           //Added String rating as a parameter
+    public Notes createNote( String titles, String notes, String dateCaughted) {           //Added String rating as a parameter
         ContentValues values = new ContentValues();                         // Create a new ContentValue Object
         values.put(MySQLiteHelper.COLUMN_TITLES, titles);                 // Insert a species into the COLUMN_SPECIES field using MYSQLiteHelper
         values.put(MySQLiteHelper.COLUMN_NOTES, notes);               // Insert weightInOz into the COLUMN_WEIGHT field using MYSQLiteHelper
-        values.put(MySQLiteHelper.COLUMN_DATECAUGHTED, dateCaught);
+        values.put(MySQLiteHelper.COLUMN_DATECAUGHTED, dateCaughted);
 
         long insertId = database.insert(MySQLiteHelper.TABLE_NOTES, null, values);         //  Instert the fish into the database using the parameters above
-        Notes newNote = new Notes(insertId, titles, notes, dateCaught);
+        Notes newNote = new Notes(insertId, titles, notes, dateCaughted);
         return newNote;
     }
 

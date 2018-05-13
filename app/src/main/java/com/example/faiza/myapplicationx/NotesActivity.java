@@ -12,7 +12,7 @@ import android.widget.EditText;
 public class NotesActivity extends AppCompatActivity {
 
     
-    EditText editTextTitles, editTextNotes, editTextDate;
+    EditText etTitles, etNotes, etDate;
     NoteDataSource noteDataSource;
 
     @Override
@@ -24,14 +24,15 @@ public class NotesActivity extends AppCompatActivity {
         Notes notes = (Notes)   bundle.getSerializable("Notes");
 
         // link each editText variable to the xml layout
-        editTextTitles = (EditText) findViewById(R.id.editTextTitles);
-        editTextNotes = (EditText) findViewById(R.id.editTextNotes);
-        editTextDate = (EditText) findViewById(R.id.editTextDate);
+        etTitles = (EditText) findViewById(R.id.editTextTitles);
+        etNotes = (EditText) findViewById(R.id.editTextNotes);
+        etDate = (EditText) findViewById(R.id.editTextDate);
 
+        //notes.setTitles(editTextTitles) = "";
 
-        editTextTitles.setText(notes.getTitles());
-        editTextNotes.setText(notes.getNotes());
-        editTextDate.setText(notes.getDateCaught());
+        etTitles.setText(notes.getTitles());
+        etNotes.setText(notes.getNotes());
+        etDate.setText(notes.getDateCaught());
 
     }
 

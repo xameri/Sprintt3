@@ -10,25 +10,25 @@ import java.util.Date;
 public class Notes implements Serializable {
     private long id;
     private String titles;
-    private String note;
-    private String dateCaught;
+    private String notes;
+    private String dateCaughted;
 
 
     public Notes() {
     }
 
-    public Notes(long id, String titles, String note, String dateCaught) {
+    public Notes(long id, String titles, String notes, String dateCaughted) {
         this.id = id;
         this.titles = titles;
-        this.note = note;
-        this.dateCaught = dateCaught;
+        this.notes = notes;
+        this.dateCaughted = dateCaughted;
 
     }
 
     public Notes(String titles, String notes, String dateCaught) {
         this.titles = titles;
-        this.note = note;
-        this.dateCaught = dateCaught;
+        this.notes = notes;
+        this.dateCaughted = dateCaught;
 
     }
 
@@ -49,19 +49,19 @@ public class Notes implements Serializable {
     }
 
     public String getNotes() {
-        return note;
+        return notes;
     }
 
     public void setNotes(String note) {
-        this.note = note;
+        this.notes = note;
     }
 
     public String getDateCaught() {
-        return dateCaught;
+        return dateCaughted;
     }
 
-    public void setDateCaught(String dateCaught) {
-        this.dateCaught = dateCaught;
+    public void setDateCaught(String dateCaughted) {
+        this.dateCaughted = dateCaughted;
     }
 
 
@@ -70,8 +70,8 @@ public class Notes implements Serializable {
     public String toString() {
         return "Notes{" +
                 "titles='" + titles + '\'' +
-                ", note='" + note + '\'' +
-                ", dateCaught='" + dateCaught + '\'' +
+                ", notes='" + notes + '\'' +
+                ", dateCaughted='" + dateCaughted + '\'' +
                 '}';
     }
 }
