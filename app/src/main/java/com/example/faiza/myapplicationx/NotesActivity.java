@@ -53,6 +53,21 @@ public class NotesActivity extends AppCompatActivity {
         if (id == R.id.action_add) {
             return true;
         }
+        if (id == R.id.action_save) {
+            return true;
+        }
+        if (id == R.id.action_edit) {
+            return true;
+        }
+        if (id == R.id.action_delete) {
+            return true;
+        }
+        if (id == R.id.action_back) {
+            Intent mainActIntent = new Intent(this, MainActivity.class);
+            finish();
+            startActivity(mainActIntent);
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }

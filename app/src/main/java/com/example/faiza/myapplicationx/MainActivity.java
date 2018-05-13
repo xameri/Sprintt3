@@ -69,6 +69,28 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_add) {
+            Intent addActIntent = new Intent(this, AddNoteActivity.class);
+            finish();
+            startActivity(addActIntent);
+            return true;
+        }
+        if (id == R.id.action_save) {
+            return true;
+        }
+        if (id == R.id.action_edit) {
+            Intent editActIntent = new Intent(this, NotesActivity.class);
+            editActIntent.putExtra("Notes", noteList.get(positionSelected));
+            finish();
+            startActivity(editActIntent);
+            return true;
+        }
+        if (id == R.id.action_delete) {
+            return true;
+        }
+        if (id == R.id.action_back) {
+            noteDataSource.deleteNote(noteList.get(positionSelected));
+            noteAdapter.remove( noteList.get(positionSelected) );
+            noteAdapter.notifyDataSetChanged();
             return true;
         }
 

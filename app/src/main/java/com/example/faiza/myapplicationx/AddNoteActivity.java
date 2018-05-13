@@ -49,6 +49,25 @@ public class AddNoteActivity extends AppCompatActivity {
         if (id == R.id.action_add) {
             return true;
         }
+        if (id == R.id.action_save) {
+            String titles = editTextTitles.getText().toString();
+            String notes = editTextNotes.getText().toString();
+            String dateCaughted = editTextDate.getText().toString();
+            noteDataSource.createNote(titles, notes, dateCaughted);
+            Intent mainActIntent = new Intent(this, MainActivity.class);
+            finish();
+            startActivity(mainActIntent);
+            return true;
+        }
+        if (id == R.id.action_edit) {
+            return true;
+        }
+        if (id == R.id.action_delete) {
+            return true;
+        }
+        if (id == R.id.action_back) {
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }
